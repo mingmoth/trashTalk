@@ -1,0 +1,59 @@
+<div class='container mt-5'>
+  <form action="/" method="POST">
+    <div class="d-flex justify-content-between">
+
+      <!--engineer-->
+      <div class="card text-center" style="width: 20rem;">
+        <div class="card-header">
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="engineer" name="title" value="engineer">
+            <label class="form-check-label" for="engineer">
+              設計師
+            </label>
+          </div>
+        </div>
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+          class="card-img-top" alt="engineer" style="height: 14rem;">
+      </div>
+      <!--designer-->
+      <div class="card text-center" style="width: 20rem;">
+        <div class="card-header">
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="designer" name="title" value="designer">
+            <label class="form-check-label" for="designer">
+              設計師
+            </label>
+          </div>
+        </div>
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+          class="card-img-top" alt="designer" style="height: 14rem;">
+      </div>
+      <!--entrepreneur-->
+      <div class="card text-center" style="width: 20rem;">
+        <div class="card-header">
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="entrepreneur" name="title" value="entrepreneur">
+            <label class="form-check-label" for="entrepreneur">
+              創業家
+            </label>
+          </div>
+        </div>
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+          class="card-img-top" alt="entrepreneur" style="height: 14rem;">
+      </div>
+    </div>
+
+    <div class="input-group mt-5">
+      <button type="submit" class="btn btn-secondary ">祝福的話</button>
+      <div class="form-control disabled" type="text" value="" id="sentence">
+        {{#if talk}}{{talk}}{{/if}}
+      </div>
+    </div>
+  </form>
+</div>
+
+{{#if target}}
+<script>
+  document.querySelector(`input[value="{{target}}"]`).checked = true
+</script>
+{{/if}}
